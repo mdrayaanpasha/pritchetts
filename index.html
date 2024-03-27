@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family:"Poppins", sans-serif;
+    }
+    body {
+    opacity: 0; /* Initially set the opacity to 0 */
+    transition: opacity 1.5s ease; /* Apply transition for opacity property */
+    
+}
+
+body.loaded {
+    opacity: 1; /* When the page is loaded, set opacity to 1 */
+}
+
+.pritchets img{
+    height:80vh;
+    width:98vw;
+}
+
+.main-txt{
+    color:#363A46
+}
+.categories img{
+    height: 19vh;
+    width:10vw;
+    transition: all 0.3s ease;
+    border-radius:100%;
+}
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reach-in,.walk-in,.jay-special,.wardrobe{
+    /* margin-left:5vw; */
+}
+h2{
+    margin-left: 3vw;
+    margin-top: 5vh;
+    margin-bottom:5vh;
+}
+.pritchets{
+    margin-top:5vh;
+}
+.product-month{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+.product-month img{
+    height:40vh;
+    width:20vw;
+    border-radius:100%;
+    margin-right:5vw;
+    transition: all 0.3s ease;
+}
+.designed{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.designed img{
+    height:40vh;
+    width:20vw;
+    margin-left:-20vw;
+    border-radius:100%;
+    transition: all 0.3s ease;
+}
+.categories img:hover, .designed img:hover, .product-month img:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px silver;
+}
+@media (max-width:1600px){
+    .designed img, .product-month img{
+        width:30vw;
+    }
+}
+
+@media(max-width:1450px){
+    .categories img{
+        width:10vw;
+    }
+    .designed img, .product-month img{
+        width:20vw
+    }
+
+}
+@media(max-width:1200px){
+    .designed img, .product-month img{
+        height:35vh;
+    }
+}
+@media(max-width:1000px){
+    .designed img, .product-month img{
+        height:25vh;
+    }
+    .categories img{
+        height: 15vh;
+    }
+
+}
+@media(max-width:700px){
+    .categories img{
+        width:20vw;
+    } 
+    .designed img, .product-month img{
+        width:35vh;
+    }
+}
+
+@media(max-width:500px){
+    .categories img{
+        width:25vw;
+    } 
+}
+
+@media(max-width:400px){
+    .pritchets img{
+        height:30vh;
+    }
+    .designed, .product-month{
+        display: block;
+    }
+    .designed img, .product-month img{
+        width:50vw;
+        margin-left: 2vw;
+    }
+    .categories img{
+       width:30vw;
+    }
+    
+}
+#nav{
+    background-color: #363A46;
+    color:white;
+    border-radius:2%;
+}
+#nav a{
+    color:white;
+}
+#navbarText{
+    color:white;
+}
+</style>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light " id="nav">
+                <a class="navbar-brand" href="index.html">Prittchet's</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="jayspecial.php">Jay's Special</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wardrobe.php">Wardrobes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="reachin.php">Reach-In</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="walkin.php">Walk-In</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="cart.php">Cart</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+    <div class="pritchets">
+        <img src="home.png" alt="">
+    </div>
+
+    <h2>Our <span class="main-txt">Categories</span></h2>
+    <div class="categories">
+        <div class="jay-special" onclick="jays()">
+            <img src="jay.jpg" alt="jay-special">
+            <center> <p><b>Jay's Special!</b></p></center>
+        </div>
+        <div class="reach-in" onclick="reachin()">
+            <img src="reach-in.jpg" alt="reach-in">
+           <center> <p><b>Reach-In Closets</b></p></center>
+        </div>
+        <div class="walk-in" onclick="walkin()">
+            <img src="walk-in.jpg" alt="walk-in">
+            <center><p><b>Walk-In</b></p></center> 
+        </div>
+        <div class="wardrobe" onclick="ward()">
+            <img src="wardrobe.jpg" alt="wardrobe">
+            <center><p><b>Wardrobe</b></p></center>
+        </div>
+    </div>
+    <hr>
+    <h2><span class="main-txt">Product</span> of the year</h2>
+    <div class="product-month" onclick="product()">
+    <img src="product-mont.jpg" alt="">
+    <div class="div"><h3>Jay's Executive</h3><p>Elevate your style with Jay's Executive. Impeccable craftsmanship and refined design define this exclusive wardrobe solution.</p></div> 
+    </div>
+    <hr>
+    <h2><span class="main-txt">Devoleped </span> By</h2>
+    <div class="designed">
+        <img src="rayaan.jpg" alt="rayaan">
+        <div class="div"><h3>Rayaan Pasha</h3><p><b>Used: </b>HTML,CSS, JS, PHP, SQL</p></div>
+        
+    </div>
+</body>
+<script>
+    let width = window.innerWidth;
+let prod = document.getElementsByClassName("product-month")[0];
+let designed = document.getElementsByClassName("designed")[0];
+
+if (width <= 400) {
+    prod.innerHTML = '<center><img src="product-mont.jpg" alt=""><div class="div"><h3>Jay\'s Executive</h3><p>Elevate your style with Jay\'s Executive. Impeccable craftsmanship and refined design define this exclusive wardrobe solution.</p></div></center>';
+
+    designed.innerHTML = '<center><img src="rayaan.jpg" alt="rayaan"><div class="div"><h3>Rayaan Pasha</h3><p><b>Used: </b>HTML, CSS, JS, PHP, SQL</p></div></center>';
+}
+function jays(){
+window.location.href="jayspecial.php"
+}
+function product(){
+    window.location.href='items.php?product=Jay%27s+Executive&submit=See+Details'
+}
+function walkin(){
+    window.location.href="walkin.php"
+}
+
+function reachin(){
+    window.location.href="reachin.php"
+}
+
+function ward(){
+    window.location.href="wardrobe.php"
+}
+
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+
+
+</script>
+</html>
